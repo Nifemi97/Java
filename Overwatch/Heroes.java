@@ -126,7 +126,7 @@ public class Heroes {
 
     @Override
     public String toString() {
-        return "Hero: " + name + " Age: " + age + " Role: " + " Difficulty: " + difficulty + " Weapons: " + weapons + " Abilities: " + abilities + " Occupation: " + occupation + 
+        return "Hero: " + name + " Age: " + age + " Role: " + role + " Difficulty: " + difficulty + " Weapons: " + weapons + " Abilities: " + abilities + " Occupation: " + occupation + 
         " Base of operation: " + boa + " Affiliation: " + affiliation;
     }
 
