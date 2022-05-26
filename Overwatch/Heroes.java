@@ -1,4 +1,8 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 /*Creating a hero
 A hero consists of
@@ -24,8 +28,8 @@ public class Heroes {
     public int age = 000;
     public String role = "Damage";
     public String difficulty = "Easy";
-    public String[] weapons = {"Heavy Pulse Rifle"};
-    public String[] abilities = {"Sprint","Biotic Field","Helix Rockets","Tactical Visor"};
+    public List<String> weapons = Arrays.asList("Heavy Pulse Rifle");
+    public List<String> abilities = Arrays.asList("Sprint", "Biotic Field", "Helix Rockets", "Tactical Visor");
     public String occupation = "Vigilante";
     public String boa = "unknown";
 
@@ -54,7 +58,7 @@ public class Heroes {
 
     public String getRole() {
         return role;
-    }
+    } 
 
     public void setRole(String role) {
         this.role = role;
@@ -67,17 +71,29 @@ public class Heroes {
     public void setDifficulty(String difficulty) {
         this.difficulty = difficulty;
     }
+    
 
-    public String[] getWeapons() {
+    public List<String> getWeapons() {
+        List<String> weapons = new LinkedList();
+        for (int i = 0; i < weapons.size(); i++) {
+            weapons.add(" " + i);
+        }
         return weapons;
     }
 
-    public void setWeapons(String[] weapons) {
+    public void setWeapons(List<String> weapons) {
         this.weapons = weapons;
     }
 
     public String[] getAbilities() {
-        return abilities;
+        String[]powers;
+        for(int i=0; i<abilities.length; i++){
+           powers.
+           
+        }
+        return  abilities[];
+        
+        
     }
 
     public void setAbilities(String[] abilities) {
@@ -126,8 +142,11 @@ public class Heroes {
 
     @Override
     public String toString() {
+
+        
         return "Hero: " + name + " Age: " + age + " Role: " + role + " Difficulty: " + difficulty + " Weapons: " + weapons + " Abilities: " + abilities + " Occupation: " + occupation + 
-        " Base of operation: " + boa + " Affiliation: " + affiliation;
+        " Base of operation: " + boa + " Affiliation: " + affiliation; for(int i=0; i<abilities.length; i++)
+        
     }
 
     @Override
