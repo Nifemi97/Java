@@ -1,0 +1,11 @@
+Overwatch - project
+Create object class
+Create Main class
+Create database - link with objects
+Create front end
+-different esports link 
+-Overwatch objects in java
+-fortnite objects c#
+
+
+Create mobile app
