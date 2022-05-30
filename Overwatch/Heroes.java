@@ -32,11 +32,13 @@ public class Heroes {
     public List<String> abilities = Arrays.asList("Sprint", "Biotic Field", "Helix Rockets", "Tactical Visor");
     public String occupation = "Vigilante";
     public String boa = "unknown";
+    public String affiliation = "Overwatch";
 
     // default hero object
     public Heroes() {
 
     }
+    
 
     // creating getters and setters for retrieving/setting information about hero
     // objects
@@ -75,8 +77,10 @@ public class Heroes {
 
     public List<String> getWeapons() {
         List<String> weapons = new LinkedList();
+        weapons = this.weapons;
         for (int i = 0; i < weapons.size(); i++) {
-            weapons.add(" " + i);
+            this.weapons.get(i);
+            //weapons.add(" " + i);
         }
         return weapons;
     }
@@ -85,18 +89,17 @@ public class Heroes {
         this.weapons = weapons;
     }
 
-    public String[] getAbilities() {
-        String[]powers;
-        for(int i=0; i<abilities.length; i++){
-           powers.
-           
+    public List<String> getAbilities() {
+        List<String> abilities  = new LinkedList();
+        abilities = this.abilities;
+        for (int i = 0; i < abilities.size(); i++) {
+            this.abilities.get(i);
+            //abilities.add(" " + i);
         }
-        return  abilities[];
-        
-        
+        return abilities;
     }
 
-    public void setAbilities(String[] abilities) {
+    public void setAbilities(List<String> abilities) {
         this.abilities = abilities;
     }
 
@@ -124,10 +127,10 @@ public class Heroes {
         this.affiliation = affiliation;
     }
 
-    public String affiliation;
+
 
     // information requried to create a new hero object
-    public Heroes(String name, int age, String role, String difficulty, String[] weapons, String[] abilities,
+    public Heroes(String name, int age, String role, String difficulty, List<String> weapons, List<String> abilities,
             String occupation, String boa, String affiliation) {
         this.name = name;
         this.age = age;
@@ -144,8 +147,8 @@ public class Heroes {
     public String toString() {
 
         
-        return "Hero: " + name + " Age: " + age + " Role: " + role + " Difficulty: " + difficulty + " Weapons: " + weapons + " Abilities: " + abilities + " Occupation: " + occupation + 
-        " Base of operation: " + boa + " Affiliation: " + affiliation; for(int i=0; i<abilities.length; i++)
+        return "Hero: " + name + " || Age: " + age + " || Role: " + role + " || Difficulty: " + difficulty + " || Weapons: " + getWeapons() + " || Abilities: " + getAbilities() + " || Occupation: " + occupation + 
+        " || Base of operation: " + boa + " || Affiliation: " + affiliation;
         
     }
 
